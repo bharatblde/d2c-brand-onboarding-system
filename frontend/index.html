@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>D2C Brand System</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="wrapper">
+<h1>D2C Brand Onboarding</h1>
+
+<!-- DASHBOARD -->
+<div class="dashboard">
+<div class="box"><h3>Total</h3><p id="total">0</p></div>
+<div class="box"><h3>Submitted</h3><p id="submitted">0</p></div>
+<div class="box"><h3>Review</h3><p id="review">0</p></div>
+<div class="box"><h3>Shortlisted</h3><p id="shortlisted">0</p></div>
+<div class="box"><h3>Accepted</h3><p id="accepted">0</p></div>
+<div class="box"><h3>Rejected</h3><p id="rejected">0</p></div>
+</div>
+
+<!-- CREATE -->
+<div class="card">
+<h2>Create Brand</h2>
+<div id="createMsg"></div>
+
+<input id="brand_name" placeholder="Brand Name">
+<input id="founder_name" placeholder="Founder Name">
+<input id="category" placeholder="Category">
+<input id="monthly_revenue" placeholder="Revenue">
+<input id="website" placeholder="Website">
+
+<button onclick="createBrand()">Submit</button>
+</div>
+
+<!-- FILTER -->
+<div class="card">
+<h2>Filter</h2>
+
+<div class="row-flex">
+  <select id="filterStatus">
+    <option value="">All</option>
+    <option value="SUBMITTED">SUBMITTED</option>
+    <option value="UNDER_REVIEW">UNDER_REVIEW</option>
+    <option value="SHORTLISTED">SHORTLISTED</option>
+    <option value="ACCEPTED">ACCEPTED</option>
+    <option value="REJECTED">REJECTED</option>
+  </select>
+
+  <input id="filterCategory" placeholder="Category">
+
+  <button onclick="getBrands()">Apply</button>
+  <button onclick="clearFilters()">Clear</button>
+</div>
+</div>
+
+<!-- LIST -->
+<div class="card">
+<h2>Brand List</h2>
+
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Founder</th>
+<th>Category</th>
+<th>Revenue</th>
+<th>Status</th>
+<th>Created At</th>
+</tr>
+</thead>
+
+<tbody id="brands"></tbody>
+</table>
+</div>
+
+<!-- SINGLE BRAND -->
+<div class="card">
+
+<!-- 🔥 FIX: WRAP HEADING -->
+<div class="center-title-wrapper">
+  <h2>Get Single Brand</h2>
+</div>
+
+<div class="center-box">
+<input id="singleId" placeholder="Enter Brand ID or Click Row">
+<div class="center-btn">
+<button onclick="getSingleBrand()">Get Brand</button>
+</div>
+</div>
+
+<div id="brandDetails"></div>
+</div>
+
+<!-- STATUS + NOTES -->
+<div class="card">
+
+<div class="split-box">
+
+  <!-- STATUS -->
+  <div class="action-box">
+    <h3>Status Management</h3>
+
+    <div id="statusMsg"></div>
+
+    <input id="brandId" readonly placeholder=" Enter Brand ID or Click Row">
+
+    <select id="status">
+      <option value="">Select Status</option>
+      <option value="UNDER_REVIEW">UNDER_REVIEW</option>
+      <option value="SHORTLISTED">SHORTLISTED</option>
+      <option value="ACCEPTED">ACCEPTED</option>
+      <option value="REJECTED">REJECTED</option>
+    </select>
+
+    <button onclick="updateStatus()">Update</button>
+  </div>
+
+  <!-- NOTES -->
+  <div class="action-box">
+    <h3>Notes</h3>
+
+    <div id="noteMsg"></div>
+
+    <input id="noteBrandId" readonly placeholder="Brand ID or Click Row">
+    <input id="noteText" placeholder="Enter Note">
+
+    <button onclick="addNote()">Add Note</button>
+  </div>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
