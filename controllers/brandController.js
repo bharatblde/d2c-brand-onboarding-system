@@ -38,7 +38,7 @@ exports.getBrands = async (req, res) => {
   try {
     const filter = {};
 
-    // ✅ Validate status filter
+    //  Validate status filter
     if (req.query.status) {
       if (!allowedStatuses.includes(req.query.status)) {
         return res.status(400).json({ error: "Invalid status filter" });
@@ -96,17 +96,17 @@ exports.updateStatus = async (req, res) => {
 
     const newStatus = req.body.status;
 
-    // ✅ Check status provided
+    // Check status provided
     if (!newStatus) {
       return res.status(400).json({ error: "Status is required" });
     }
 
-    // ✅ Validate status value
+    // Validate status value
     if (!allowedStatuses.includes(newStatus)) {
       return res.status(400).json({ error: "Invalid status value" });
     }
 
-    // ✅ Validate transition
+    //  Validate transition
     if (!validTransitions[brand.status].includes(newStatus)) {
       return res.status(400).json({ error: "Invalid status transition" });
     }
@@ -128,7 +128,7 @@ exports.addNote = async (req, res) => {
       return res.status(400).json({ error: "Invalid ID format" });
     }
 
-    // ✅ Check brand exists
+    //  Check brand exists
     const brand = await Brand.findById(req.params.id);
     if (!brand) {
       return res.status(404).json({ error: "Brand not found" });
