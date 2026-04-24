@@ -29,10 +29,8 @@ It allows teams to:
 
 ---
 
-# ✅ Your Fixed Code
-
-```md
 ## 📁 Project Structure
+```md
 
 ```bash
 brand-onboarding-system/
@@ -213,11 +211,49 @@ frontend/index.html
 ---
 
 ## 📸 Screenshots
-- 📊 Dashboard
-- 📝 Create Brand Form
-- 📋 Brand List & Filters
-- 🔄 Status Updates & Notes
-- 🧪 Postman API Tests
+ # Frontend 
+ ### 📊  Dashboard
+![Dashboard](screenshots/Brand%20Management%20.png)
+
+### 📋 Brand List & Filters
+![Brand List & Filters](screenshots/load%20and%20get%20brands%20by%20id.png)
+
+### 🔄 Status Updates & Notes
+![Status Updates & Notes](screenshots/status%20management%20and%20Notes.png)
+  
+## 🧪 Postman API Tests
+
+### 1️⃣ Create Brand
+![Create Brand](screenshots/Create%20Brand.png)
+
+### 2️⃣ Get Brands
+![Get Brands](screenshots/Get%20Brands.png)
+
+### 3️⃣ Get By Category
+![Get By Category](screenshots/Get%20By%20Category.png)
+
+### 4️⃣ Get By Status
+![Get By Status](screenshots/Get%20by%20Status.png)
+
+### 5️⃣ Get Single Brand
+![Get Single Brand](screenshots/Get%20Single%20Brand.png)
+
+### 6️⃣ Status Management
+![Status Management](screenshots/Status%20Management.png)
+
+### 7️⃣ Status Management Invalid Response
+![Invalid Status](screenshots/Status%20Management%20Invalid%20Response.png)
+
+### 8️⃣ Add Notes
+![Notes](screenshots/note.png)
+
+
+### 9️⃣ Note cannot be empty
+![Add Notes](screenshots/AddNotes.png)
+
+
+### 🔟 Dashboard Summary
+![Dashboard](screenshots/Dashboard%20Summary.png)
 
 ---
 
